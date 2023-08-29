@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+    
 </head>
 <body>
 
@@ -31,8 +34,83 @@
     </section>
 
 
+    <section id="selectores_de_clase">
+        <h2 class="Titulo">Selectores de id</h2>
+        <p>Este selector inicia con la clase de un objeto en el dom</p>
+        <p id="parrafo_seleccionado">Por ejemplo: #parrafo_seleccionado{color:blue}</p>
+    </section>
 
-   
-    
+    <section id="selectores_de_atributo">
+        <h2>Selectores de atributos</h2>
+        <p>Este selector inicia con la etiqueta y atributo de un objeto dentro del dom</p>
+        <p>Por ejemplo input[placeholder="Escribit input"]{border:2px solid orange;}</p>
+        <input type="text" placeholder="input con borde negro">
+        <input type="text" placeholder="input co borde naranja">
+    </section>
+
+    <section class="section_ordenado" id="selector_cobinador_decendiente">
+        <h2>Selectores combinadores decencientes</h2>
+        <p>Este selector hace que todos los elementos que esten dentros del objeto padre tengan el mismo estilo</p>
+        <p>Por ejemplo .section_ordenado *{mardgin:20px}</p>
+    </section>
+
+    <section class="section_ordenado" id="Selector_combinador_hijo_directo">
+        <h2>Selectores comibnadores hijo directo</h2>
+        <article>
+            <p>Este selector hace que de todos solo el primer hijo dentro del elemento se modifique</p>
+        </article>
+        <p>Por ejemplo: #selector_combinador_hijo_directo > article {border:2px solid green;} </p>
+    </section>
+
+    <section class="section_ordenado" id="selector_combinador_elemento_adyacente">
+        <h2>Selectores combinadores elemento adyacente</h2>
+        <p>Este selector hace que el elemento siguiente al objeto se modifique</p>
+        <p id="parrafo_seleccionado2">Por ejemplo: #parrago_seleciona2 + p {background-color:aqua;}</p>
+        <p>Parrafo siguiente 1</p>
+        <p>Parrafo siguiente 2</p>
+    </section>
+
+    <section class="section_ordenado" id="Selector_combinador_elemento_hermano">
+        <h2>Selectores de combinador hermano</h2>
+        <p>Este selector hace que todos los elementos siguientes al objeto seleccionado se modifiquen</p>
+        <p id="parrafo_seleccionado3">Por ejemplo: #parrafo_seleccionado3 p {background-color: gold;} </p>
+        <p>parrafo siguiente 1</p>
+        <p>parrafo siguiente 2</p>
+    </section>
+
+    <style>
+        *{
+            background-color: whitesmoke;
+        }
+
+        #parrafo_seleccionado {
+            color: red;
+        }
+
+        .Titulo{
+            color: peru;
+        }
+        input[placeholder="Input con borde naranja"]{
+            border:2px solid orange;
+            border-radius: 10px;
+        }
+
+        .section_ordenado *{
+            margin: 20px;
+        }
+
+        #Selector_combinador_hijo_directo > article {
+            border:2px solid green;
+            border-radius: 10px;
+        }
+
+        #parrafo_selecionado2 + p {
+            background-color: aqua;
+        }
+
+        #parrafo_selecionado3 ~ p {
+            background-color: gold;
+        }
+    </style>
 </body>
 </html>
